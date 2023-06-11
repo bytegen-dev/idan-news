@@ -30,13 +30,13 @@ function ViewNews(props) {
             <img src={props.news.imgUrl} alt="img-url" />
         </div>
         <div className="share">
-            <a href="wa.me" target="_blank" rel='noreferrer'>
+            <a href="https://www.facebook.com/dialog/share?app_id=205604876116272&display=popup&href=https://idan-tv.netlify.app" target="_blank" rel='noreferrer'>
                 <i className="fa-brands fa-facebook"></i>
             </a>
-            <a href="wa.me" target="_blank" rel='noreferrer'>
+            <a href="https://twitter.com/intent/tweet?url=https://idan-tv.netlify.app" target="_blank" rel='noreferrer'>
                 <i className="fa-brands fa-twitter"></i>
             </a>
-            <a href="wa.me" target="_blank" rel='noreferrer'>
+            <a href="https://api.whatsapp.com/send?text=https://idan-tv.netlify.app" target="_blank" rel='noreferrer'>
                 <i className="fa-brands fa-whatsapp"></i>
             </a>
         </div>
