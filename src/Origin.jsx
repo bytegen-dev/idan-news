@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import CreateNews from './pages/CreateNews'
 import ViewNews from './pages/ViewNews'
 import Nav from './components/Nav'
@@ -22,9 +22,19 @@ function Origin() {
     setViewingNews({...news})
   }
 
+  const [isMenu, setIsMenu] = useState(false)
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.toLowerCase().includes("menu")) {
+      setIsMenu(true);
+    } else {
+      setIsMenu(false);
+    }
+  }, [location.pathname]);
+
   return (
-    <BrowserRouter>
-      <div className='origin'>
+      <div className={isMenu ? "origin show-menu" : "origin"}>
         <Nav />
         <Menu />
         <Backdrop />
@@ -32,12 +42,12 @@ function Origin() {
         <Loader />
         <Routes>
             <Route path='/' element={<ViewNews news={viewingNews} />}/>
+            <Route path='/menu' element={<ViewNews news={viewingNews} />}/>
             <Route path='/news' element={<ViewNews news={viewingNews} />}/>
             <Route path='/create' element={<CreateNews createNews={createNews} />}/>
             <Route path='/*' element={<Oops />}/>
         </Routes>
       </div>
-    </BrowserRouter>
   )
 }
 

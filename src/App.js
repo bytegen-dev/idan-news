@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Origin from './Origin';
 import './index.scss';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   useEffect(()=>{
@@ -9,9 +10,11 @@ function App() {
     })
   })
   return (
+    <BrowserRouter>
       <div className="app">
         <Origin />
       </div>
+    </BrowserRouter>
   );
 }
 

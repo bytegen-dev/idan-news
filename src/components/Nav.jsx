@@ -35,9 +35,12 @@ function Nav() {
             <div className="language-opener">
                 EN
             </div>
-            <div className="hamburger">
+            <div className="hamburger" onClick={()=>{
+              document.getElementById("please-hide").click()
+            }}>
                 <i className="fa fa-bars"></i>
             </div>
+            <Link id='please-hide' style={{display: "none"}} to={"/menu"}>Menu</Link>
         </div>
       </div>
     </div>
