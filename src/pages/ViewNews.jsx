@@ -27,7 +27,7 @@ function ViewNews(props) {
                     <i className="fa fa-chevron-down"></i>
                 </div>
             </div>
-            <img src={props.news.imgUrl} alt="img-url" />
+            {props.news.imgUrl.length > 1 ? <img src={props.news.imgUrl} alt="img-url" /> : <img src={props.news.imgFile} alt="img-url" />}
         </div>
         <div className="share">
             <a href="https://www.facebook.com/dialog/share?app_id=205604876116272&display=popup&href=https://idan-tv.netlify.app" target="_blank" rel='noreferrer'>

@@ -14,7 +14,8 @@ function Origin() {
     headline: "Tinubu awards Idan TV as TV station of the decade",
     subHeadline: "Idan TV has been awarded by the Federal Government of Nigeria for its vigorous and timely approach to sharing Breaking News...",
     imgUrl: "https://cdn.punchng.com/wp-content/uploads/2022/06/09141433/Bola-Tinubu-.jpg",
-    newsType: "local"
+    newsType: "local",
+    imgFile: ""
   })
 
   function createNews(news){
